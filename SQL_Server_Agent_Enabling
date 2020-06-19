@@ -1,0 +1,28 @@
+The following example enables the SQL Server Agent extended stored procedures.
+From Microsoft SQL Server Management Studio connect to the Database Engine.
+From the Standard bar, click New Query.
+Copy and paste the following example into the query window and click Execute.
+
+
+
+sp_configure 'show advanced options', 1;  
+GO  
+RECONFIGURE;  
+GO  
+sp_configure 'Agent XPs', 1;  
+GO  
+RECONFIGURE  
+GO  
+
+
+or you can enable with the following steps
+
+Method 1: Enable the SQL Server Agent service by using SQL Server Configuration Manager
+To do this, follow these steps:
+Click Start, click Programs, and then click SQL Server 2008.
+Click Configuration Tools, and then click SQL Server Configuration Manager.
+Expand SQL Server 2008 Services.
+Locate the SQL Server Agent service. The SQL Server Agent service is named "SQL Server Agent" for default instances and is named "SQL Server Agent (Instance name)" for named instances.
+Right-click SQL Server Agent, and then click Properties.
+On the Log On tab, click to select the This account check box. Specify a different account name and password.
+In the Service status section, click Start, and then click OK.
